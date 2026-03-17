@@ -1,0 +1,93 @@
+/* src/pages/DaysOfWeek.css */
+
+.days-container {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to right, #fef6e4, #fcd5ce);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.days-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #f15bb5;
+  animation: bounce 1.5s infinite alternate;
+}
+
+.days-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.days-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.day-button {
+  padding: 15px 25px;
+  background-color: #cdb4db;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.day-button:hover {
+  background-color: #ffc8dd;
+  transform: scale(1.05);
+}
+
+.day-button.active {
+  background-color: #ffafcc;
+  font-weight: bold;
+}
+
+.day-info {
+  flex: 1;
+  padding: 25px;
+  background-color: #fff1e6;
+  border: 2px dashed #ffb703;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  animation: fadeIn 0.5s ease-in-out;
+  min-width: 280px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .days-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .day-info {
+    width: 100%;
+  }
+}

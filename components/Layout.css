@@ -1,0 +1,26 @@
+.app-header {
+  display: flex;
+  justify-content: space-between; /* title left, nav right */
+  align-items: center;
+  background: #ffebcd;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* push links to the right */
+  gap: 40px;                 /* space between Dashboard and Logout */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.3rem;         /* increase font size */
+  padding: 6px 12px;         /* add clickable padding */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4081;            /* playful hover effect */
+}
